@@ -77,7 +77,7 @@ class Log
             $patterns [$i] = $pattern;
             $replacements[$i]  = $replacement;
         }
-        $maskedString = preg_replace($patterns, $replacements, $rawString);
+        $maskedString = preg_replace($patterns, $replacements, $rawString ?? '');
         return $maskedString;
     }
 
